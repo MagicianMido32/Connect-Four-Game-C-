@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1525819945 source:c:\users\medot\desktop\cblocks\connect four\main.cpp
+	<iostream>
+	<windows.h>
+
