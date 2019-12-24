@@ -1,0 +1,55 @@
+#include <iostream>
+
+using namespace std;
+void printr(int arrP[5][5]);
+void won(int arr[5][5]);
+int main()
+{
+    cout << "Connect Four By Team Mohammed AL-Sayed and Mohammed Nabil\n";
+
+    int solveArray[5][5]=
+    {
+        {0,0,0,0,0},/*0*/
+        {0,0,0,0,0},/*1*/
+        {0,0,0,0,0},/*2*/
+        {0,0,0,0,0},/*3*/
+        {0,0,0,0,0} /*4*/
+    };
+//down
+
+    int inputSymbol = 0;
+    int inputColumn=0;
+    int occupationLevel[5]= {0,0,0,0,0};
+    again:
+     cout <<"Sellect 0 for *1 For $ 2 for # 3 for % \n";
+    cin>>inputSymbol;
+    cout <<"Select Column to insert in \n";
+
+    cin>>inputColumn;
+    solveArray[occupationLevel[inputColumn]][inputColumn]=inputSymbol;
+    occupationLevel[inputColumn]+=1;
+    printr(solveArray);
+    goto again;
+    return 0;
+}
+
+void  printr(int arrP[5][5])
+{
+    char symbolArr[5]={'\0','@','#','$','*'};
+    char charArr[5][5];
+    for (int i =4; i >=0; i--)
+    {
+        for(int y =0; y>5;y++)
+        {
+            charArr[i][y]=symbolArr[arrP[i][y]];
+            cout<<" | "<<charArr[i][y];
+        }
+        cout<<"\n"<<endl;
+    }
+
+}
+
+void won(int arr[5][5])
+{
+
+}
